@@ -45,17 +45,14 @@ for _ in range(number_of_commands):
 
     elif command[0] == 'move':
         steps = int(command[2])
-        for _ in range(steps):
-            row = current_position[0] + directions[direction][0]
-            col = current_position[1] + directions[direction][1]
+        row = current_position[0] + directions[direction][0] * steps
+        col = current_position[1] + directions[direction][1] * steps
 
-            if is_valid_move(row, col, matrix):
-                matrix[current_position[0]][current_position[1]] = '.'
-                matrix[row][col] = 'A'
-                current_position[0] = row
-                current_position[1] = col
-            else:
-                break
+        if is_valid_move(row, col, matrix):
+            matrix[current_position[0]][current_position[1]] = '.'
+            matrix[row][col] = 'A'
+            current_position[0] = row
+            current_position[1] = col
 
 if targets_count > 0:
 
