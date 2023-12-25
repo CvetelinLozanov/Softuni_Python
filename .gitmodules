@@ -1,0 +1,3 @@
+[submodule "python_advanced/python_advanced/modules_exercise/gui_shop"]
+	path = python_advanced/python_advanced/modules_exercise/gui_shop
+	url = https://github.com/Nassoo/gui_shop.git
