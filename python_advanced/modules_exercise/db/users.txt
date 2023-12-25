@@ -1,0 +1,2 @@
+{"username": "Azis", "password": "Az!5", "first_name": "Azis", "last_name": "Azisov", "products": [4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 9, 3, 3, 4, 4, 4, 4, 4, 15, 15, 15, 15, 15, 15, 15, 15, 15, 15, 11, 6, 1, 7, 7], "is_admin": true}
+{"username": "Ivan", "password": "Agferg!", "first_name": "aasdadsa", "last_name": "sdadasdas", "products": []}
