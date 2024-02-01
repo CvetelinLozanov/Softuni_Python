@@ -71,7 +71,7 @@ while True:
                 print('No matches')
                 continue
 
-            smallest_odd_num = max(smallest_odd_num)
+            smallest_odd_num = min(smallest_odd_num)
             number_last_index = len(numbers) - 1 - numbers[::-1].index(smallest_odd_num)
             print(number_last_index)
 
