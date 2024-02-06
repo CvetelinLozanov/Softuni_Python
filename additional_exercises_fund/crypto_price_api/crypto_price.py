@@ -1,6 +1,10 @@
 import requests
 import pandas as pd
 import matplotlib.pyplot as plt
+from datetime import datetime, timedelta
+
+CURRENT_DAY = datetime.today().strftime('%Y-%m-%d')
+TEN_DAYS_BEFORE = (datetime.today() - timedelta(days=10)).strftime('%Y-%m-%d')
 
 
 # Function to fetch crypto data from Alpha Vantage API
@@ -23,6 +27,7 @@ def fetch_crypto_data(api_key, symbol, market):
 def process_crypto_data(json_data):
     df = pd.DataFrame(json_data).T
     df.index = pd.to_datetime(df.index)
+    df = df.loc[TEN_DAYS_BEFORE:]  # takes the information only for the last 10 days
     df = df.astype(float)
     df.columns = ['open_bgn', 'open_usd', 'high_bgn', 'high_usd', 'low_bgn', 'low_usd', 'close_bgn', 'close_usd',
                   'volume', 'market_cap']
@@ -94,8 +99,7 @@ def visualize_crypto_prices(dataframe, symbol: str):
 
 # Main function to orchestrate the execution of all tasks
 def main():
-    #Insert a api key before executing the program
-    api_key = ""
+    api_key = "YOUR_ALPHA_VANTAGE_API_KEY"
     symbol = "XMR"  # Example symbol (BTC)
     market = "BGN"
 
