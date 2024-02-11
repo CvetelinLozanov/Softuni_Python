@@ -1,0 +1,2 @@
+class LongNameException(Exception):
+    pass

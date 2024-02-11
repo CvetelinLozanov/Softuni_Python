@@ -1,0 +1,2 @@
+class InvalidHeight(Exception):
+    pass
