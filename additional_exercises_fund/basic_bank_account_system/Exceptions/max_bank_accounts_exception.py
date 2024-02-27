@@ -1,0 +1,2 @@
+class MaxBankAccountExceptions(Exception):
+    pass
