@@ -73,12 +73,12 @@ class HangmanGame:
         y0 = y - r
         x1 = x + r
         y1 = y + r
-        self.canvas.create_oval(x0, y0, x1, y1, width=width, outline=color)
-        self.canvas.pack()
+        canvas.create_oval(x0, y0, x1, y1, width=width, outline=color)
+        canvas.pack()
 
     def create_line(self, x0, y0, x1, y1, width, canvas, dotted=None):
-        self.canvas.create_line(x0, y0, x1, y1, width=width, fill='grey', dash=dotted)
-        self.canvas.pack()
+        canvas.create_line(x0, y0, x1, y1, width=width, fill='grey', dash=dotted)
+        canvas.pack()
 
     def draw_gallows(self):
         self.create_line(100, 25, 100, 400, 10, self.canvas)
@@ -124,6 +124,9 @@ class HangmanGame:
         chosen_letter = self.entry.get()
         if len(chosen_letter) > 1:
             self.wrong_letter_size.configure(text="You have entered too long text. Please enter one letter!", fg='red')
+            return
+
+        self.wrong_letter_size.configure(text='')
 
         if chosen_letter in self.secret_word:
             pass
