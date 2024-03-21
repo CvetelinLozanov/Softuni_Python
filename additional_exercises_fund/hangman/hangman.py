@@ -16,6 +16,7 @@ class HangmanGame:
         self.current_category = tk.StringVar()
         self.secret_word = ""
         self.guesses_left = 6
+        self.selected_word = ""
         self.guesses = set()
 
         master.geometry("650x650")
@@ -34,8 +35,8 @@ class HangmanGame:
         self.entry = tk.Entry(master)
         self.entry.pack()
 
-        self.wrong_letter_size = tk.Label(master, text="")
-        self.wrong_letter_size.pack()
+        self.error_message = tk.Label(master, text="")
+        self.error_message.pack()
 
         self.guess_button = tk.Button(master, text="Guess", command=self.guess_letter)
         self.guess_button.pack(pady=5)
@@ -55,13 +56,14 @@ class HangmanGame:
 
     def choose_new_word(self):
         # This method should choose a new word from the selected category and reset the game attributes
+        if self.error_message['text']:
+            self.error_message.configure(text="")
         self.restart()
         current_category = self.current_category.get()
         self.category_label.configure(text=f"Category: {current_category}")
-        word_from_category = random.choice(self.categories[current_category])
-        self.word_display.configure(text=f"{word_from_category[0]}{' _ ' * (len(word_from_category) - 2)}"
-                                         f"{word_from_category[-1]}")
-        self.secret_word = word_from_category
+        self.selected_word = random.choice(self.categories[current_category])
+        self.secret_word = f"{self.selected_word[0]}{' _ ' * (len(self.selected_word) - 2)}{self.selected_word[-1]}"
+        self.word_display.configure(text=self.secret_word)
 
     def restart(self):
         self.canvas.delete("all")
@@ -121,20 +123,23 @@ class HangmanGame:
 
     def guess_letter(self):
         # This method should handle the player's guess and update the game state accordingly
-        chosen_letter = self.entry.get()
-        if len(chosen_letter) > 1:
-            self.wrong_letter_size.configure(text="You have entered too long text. Please enter one letter!", fg='red')
-            return
+        if self.category_label['text'] != 'Category: ':
+            chosen_letter = self.entry.get()
+            if len(chosen_letter) > 1:
+                self.error_message.configure(text="You have entered too long text. Please enter one letter!", fg='red')
+                return
 
-        self.wrong_letter_size.configure(text='')
+            self.error_message.configure(text='')
 
-        if chosen_letter in self.secret_word:
-            pass
+            if chosen_letter in self.selected_word:
+                pass
+            else:
+                self.guesses_left -= 1
+                self.draw_hangman()
         else:
-            self.guesses_left -= 1
-            self.draw_hangman()
+            self.error_message.configure(text="Please select a category before guessing a word!", fg='red')
 
-    def update_word_display(self):
+    def update_word_display(self, entered_letter: str):
         # This method should update the displayed word with the guessed letters
         pass
 
