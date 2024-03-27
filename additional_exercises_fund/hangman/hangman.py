@@ -62,7 +62,7 @@ class HangmanGame:
         current_category = self.current_category.get()
         self.category_label.configure(text=f"Category: {current_category}")
         self.selected_word = random.choice(self.categories[current_category])
-        self.secret_word = f"{self.selected_word[0]}{' _ ' * (len(self.selected_word) - 2)}{self.selected_word[-1]}"
+        self.secret_word = f"{self.selected_word[0]}{' _' * (len(self.selected_word) - 2)} {self.selected_word[-1]}"
         self.word_display.configure(text=self.secret_word)
 
     def restart(self):
@@ -132,16 +132,35 @@ class HangmanGame:
             self.error_message.configure(text='')
 
             if chosen_letter in self.selected_word:
-                pass
+                self.update_word_display(chosen_letter)
             else:
                 self.guesses_left -= 1
                 self.draw_hangman()
+                self.check_if_hanged()
         else:
             self.error_message.configure(text="Please select a category before guessing a word!", fg='red')
 
     def update_word_display(self, entered_letter: str):
         # This method should update the displayed word with the guessed letters
-        pass
+        current_secret_word = list(self.secret_word)
+        word_index = 2
+        for index in range(1, len(self.selected_word) - 1, 1):
+            if self.selected_word[index] == entered_letter:
+                current_secret_word[word_index] = entered_letter
+
+            word_index += 2
+
+        self.secret_word = ''.join(current_secret_word)
+        self.word_display.configure(text=self.secret_word)
+        self.check_win()
+
+    def check_win(self):
+        if '_' not in self.secret_word:
+            messagebox.showinfo('Hangman Game', 'Congratulation! You guessed the word!')
+
+    def check_if_hanged(self):
+        if self.guesses_left == 0:
+            messagebox.showinfo('Hangman Game', "You've been hanged!\nPlease select new word.")
 
 
 def main():
