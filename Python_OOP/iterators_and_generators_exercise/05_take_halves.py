@@ -1,21 +1,22 @@
 def solution():
 
-    def integers(n):
-        # TODO: Implement
+    def integers():
         start = 1
-        end = n
-        while start <= end:
+        while True:
             yield start
             start += 1
 
-    def halves(n):
+    def halves():
 
-        for i in integers(n):
-            # TODO: Implement
+        for i in integers():
             yield i / 2
 
     def take(n, seq):
-        # TODO: Implement
-        pass
+        return [next(seq) for _ in range(n)]
 
     return (take, halves, integers)
+
+
+take = solution()[0]
+halves = solution()[1]
+print(take(5, halves()))

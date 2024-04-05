@@ -1,3 +1,10 @@
 def fibonacci():
-    first_num = 0
-    second_num = 1
+    cur_num, next_num = 0, 1
+    while True:
+        yield cur_num
+        cur_num, next_num = next_num, cur_num + next_num
+
+
+generator = fibonacci()
+for i in range(8):
+    print(next(generator))
