@@ -49,18 +49,23 @@ class HangmanGame:
 
     # Method to generate drop down menu allowing user to select category
     def choose_category(self):
+        """Method is generating drop down list based on dict keys from categories set in the init"""
         categories = list(self.categories.keys())
         self.current_category.set(categories[0])
         drop_down_menu = tk.OptionMenu(self.master, self.current_category, *categories)
         drop_down_menu.pack(pady=5)
 
-    # Method to select a word from selected category.
-    # Calling restart method to reset the hangman canvas and reset the guesses left.
-    # Checks if there is an error message for wrong input and reset it when user trigger the button.
-    def choose_new_word(self):
-
+    # Method to reset error message
+    def reset_error_message(self):
+        """Checks if there is an error message for wrong input and reset it when user trigger the button."""
         if self.error_message['text']:
             self.error_message.configure(text="")
+
+    # Method to select a word from selected category.
+    def choose_new_word(self):
+        """Method to select a word from selected category. Calling reset error message method.
+        Calling restart method to reset the hangman canvas and guesses left."""
+        self.reset_error_message()
 
         self.restart()
         current_category = self.current_category.get()
@@ -137,7 +142,8 @@ class HangmanGame:
 
     # Method to check if user's letter is in searched word
     def guess_letter(self):
-
+        """Method to check if there is selected searched word.
+         Checks if the user input is correct and if the entered letter is in the searched word."""
         if self.category_label['text'] != 'Category: ':
             chosen_letter = self.entry.get()
             if len(chosen_letter) > 1:
@@ -146,7 +152,7 @@ class HangmanGame:
 
             self.error_message.configure(text='')
 
-            if chosen_letter in self.selected_word:
+            if chosen_letter in self.selected_word[1:-1]:
                 self.update_word_display(chosen_letter)
             else:
                 self.guesses_left -= 1
