@@ -8,9 +8,6 @@ def shopping_cart(*args):
         meal = arg[0]
         product = arg[1]
 
-        if meal not in meals:
-            meals[meal] = []
-
         if meal == 'Soup' and len(meals[meal]) < 3:
             if product not in meals[meal]:
                 meals[meal].append(product)
@@ -31,7 +28,7 @@ def shopping_cart(*args):
         for product in sorted(value):
             result.append(f" - {product}")
 
-    if result:
+    if len(result) > 3:
         return "\n".join(result)
     return "No products in the cart!"
 
