@@ -5,7 +5,6 @@ class BaseWaiter(ABC):
     def __init__(self, name: str, hours_worked: int):
         self.name = name
         self.hours_worked = hours_worked
-        self.total_earnings = 0
 
     @property
     def name(self):
@@ -34,8 +33,8 @@ class BaseWaiter(ABC):
         pass
 
     @abstractmethod
-    def report_shifts(self):
+    def report_shift(self):
         pass
 
     def __str__(self):
-        return f"Name: {self.name}, Total earnings: ${self.total_earnings:.2f}"
+        return f"Name: {self.name}, Total earnings: ${self.calculate_earnings():.2f}"

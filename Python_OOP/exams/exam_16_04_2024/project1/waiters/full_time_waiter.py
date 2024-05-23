@@ -6,8 +6,7 @@ class FullTimeWaiter(BaseWaiter):
         super().__init__(name, hours_worked)
 
     def calculate_earnings(self):
-        self.total_earnings = self.hours_worked * 15
         return self.hours_worked * 15
 
-    def report_shifts(self):
+    def report_shift(self):
         return f"{self.name} worked a full-time shift of {self.hours_worked} hours."

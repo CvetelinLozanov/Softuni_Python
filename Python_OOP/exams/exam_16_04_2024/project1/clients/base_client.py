@@ -8,7 +8,6 @@ class BaseClient(ABC):
         self.membership_type = membership_type
         self.points = 0
 
-
     @property
     def name(self):
         return self.__name
@@ -29,20 +28,9 @@ class BaseClient(ABC):
             raise ValueError("Invalid membership type. Allowed types: Regular, VIP.")
         self.__membership_type = value
 
-    @property
     @abstractmethod
-    def dollars(self):
-        pass
-
     def earning_points(self, order_amount: float):
-        amount = floor(order_amount)
-        order_points = 0
-        while amount >= self.dollars:
-            self.points += 1
-            order_points += 1
-            amount -= self.dollars
-
-        return f"{self.name} earned {order_points} points from the order."
+        pass
 
     def apply_discount(self):
         discount_percentage = 0
@@ -54,4 +42,4 @@ class BaseClient(ABC):
             discount_percentage = 5
             self.points -= 50
 
-        return f"{self.name} received a {discount_percentage}% discount. Remaining points {self.points}"
+        return discount_percentage, self.points
