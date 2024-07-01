@@ -89,11 +89,10 @@ class HorseRaceApp:
         if len(race.jockeys) < 2:
             raise Exception(f"Horse race {race_type} needs at least two participants!")
 
-        winner = sorted(race.jockeys, key=lambda j: -j.horse.max_speed)[0]
+        winner = sorted(race.jockeys, key=lambda j: -j.horse.speed)[0]
 
         return (f"The winner of the {race_type} race, with a speed of {winner.horse.speed}km/h is {winner.name}!"
                 f" Winner's horse: {winner.horse.name}.")
-
     def _get_horse(self, horse_name: str):
         return next((horse for horse in self.horses if horse.name == horse_name), None)
 
