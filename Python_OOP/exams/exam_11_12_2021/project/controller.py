@@ -57,9 +57,10 @@ class Controller:
             car.is_taken = True
             return f"Driver {driver.name} changed his car from {old_car.model} to {car.model}."
 
-        driver.car = car
-        car.is_taken = True
-        return f"Driver {driver_name} chose the car {car.model}."
+        if not car.is_taken:
+            driver.car = car
+            car.is_taken = True
+            return f"Driver {driver_name} chose the car {car.model}."
 
     def add_driver_to_race(self, race_name: str, driver_name: str):
         race = self.__find_race_by_name(race_name)
