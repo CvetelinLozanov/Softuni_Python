@@ -1,5 +1,4 @@
 from abc import ABC, abstractmethod
-from math import floor
 
 
 class BaseClient(ABC):
@@ -21,7 +20,7 @@ class BaseClient(ABC):
     @property
     def membership_type(self):
         return self.__membership_type
-
+    
     @membership_type.setter
     def membership_type(self, value):
         if value not in ['Regular', 'VIP']:
@@ -33,13 +32,13 @@ class BaseClient(ABC):
         pass
 
     def apply_discount(self):
-        discount_percentage = 0
+        discount = 0
         if self.points >= 100:
-            discount_percentage = 10
+            discount = 10
             self.points -= 100
 
         elif 50 <= self.points < 100:
-            discount_percentage = 5
+            discount = 5
             self.points -= 50
 
-        return discount_percentage, self.points
+        return discount, self.points

@@ -12,20 +12,18 @@ class BaseWaiter(ABC):
 
     @name.setter
     def name(self, value):
-        if len(value) < 3 or len(value) > 50:
+        if not 3 <= len(value) <= 50:
             raise ValueError("Waiter name must be between 3 and 50 characters in length!")
-
         self.__name = value
 
     @property
     def hours_worked(self):
         return self.__hours_worked
-
+    
     @hours_worked.setter
     def hours_worked(self, value):
         if value < 0:
             raise ValueError("Cannot have negative hours worked!")
-
         self.__hours_worked = value
 
     @abstractmethod
@@ -37,4 +35,5 @@ class BaseWaiter(ABC):
         pass
 
     def __str__(self):
-        return f"Name: {self.name}, Total earnings: ${self.calculate_earnings():.2f}"
+        earnings = self.calculate_earnings()
+        return f"Name: {self.name}, Total earnings: ${earnings:.2f}"
