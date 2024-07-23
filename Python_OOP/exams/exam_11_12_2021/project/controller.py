@@ -21,8 +21,9 @@ class Controller:
         if car:
             raise Exception(f"Car {model} is already created!")
 
-        self.cars.append(self.CARS[car_type](model, speed_limit))
-        return f"{car_type} {model} is created."
+        if car_type in self.CARS:
+            self.cars.append(self.CARS[car_type](model, speed_limit))
+            return f"{car_type} {model} is created."
 
     def create_driver(self, driver_name: str):
         driver = self.__find_driver_by_name(driver_name)
@@ -67,10 +68,10 @@ class Controller:
         driver = self.__find_driver_by_name(driver_name)
 
         if not race:
-            raise Exception(f"Race {race.name} could not be found!")
+            raise Exception(f"Race {race_name} could not be found!")
 
         if not driver:
-            raise Exception(f"Driver {driver.name} could not be found!")
+            raise Exception(f"Driver {driver_name} could not be found!")
 
         if not driver.car:
             raise Exception(f"Driver {driver_name} could not participate in the race!")
