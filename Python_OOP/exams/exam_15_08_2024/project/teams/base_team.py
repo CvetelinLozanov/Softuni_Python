@@ -1,5 +1,6 @@
 from abc import ABC, abstractmethod
 from typing import List
+
 from project.equipment.base_equipment import BaseEquipment
 
 
@@ -15,17 +16,17 @@ class BaseTeam(ABC):
     @property
     def name(self):
         return self.__name
-
+    
     @name.setter
     def name(self, value):
-        if value.strip() == '':
+        if value.strip() == "":
             raise ValueError("Team name cannot be empty!")
         self.__name = value
-
+        
     @property
     def country(self):
         return self.__country
-
+    
     @country.setter
     def country(self, value):
         if len(value.strip()) < 2:
@@ -47,14 +48,21 @@ class BaseTeam(ABC):
         pass
 
     def get_statistics(self):
-        avg_protection = int(sum([equip.protection for equip in self.equipment])
-                             / len(self.equipment)) if len(self.equipment) != 0 else 0
-        equipment_price = sum(equip.price for equip in self.equipment)
-        statistic = (f"Name: {self.name}\nCountry: {self.country}\nAdvantage: {self.advantage} points\n"
-                     f"Budget: {self.budget:.2f}EUR\nWins: {self.wins}\nTotal Equipment Price:"
-                     f" {equipment_price:.2f}\nAverage Protection: {avg_protection}\n")
-        return statistic
+        equipment_price = sum(e.price for e in self.equipment)
+        protection = int(sum(e.protection for e in self.equipment) / len(self.equipment)) if self.equipment else 0
+        return (f"Name: {self.name}\n"
+                f"Country: {self.country}\n"
+                f"Advantage: {self.advantage} points\n"
+                f"Budget: {self.budget:.2f}EUR\n"
+                f"Wins: {self.wins}\n"
+                f"Total Equipment Price: {equipment_price:.2f}\n"
+                f"Average Protection: {protection}")
 
+    def sum_team_points(self):
+        return self.advantage + sum(e.protection for e in self.equipment)
 
+    def __eq__(self, other: "BaseTeam"):
+        return self.sum_team_points() == other.sum_team_points()
 
-
+    def __lt__(self, other: "BaseTeam"):
+        return self.sum_team_points() < other.sum_team_points()

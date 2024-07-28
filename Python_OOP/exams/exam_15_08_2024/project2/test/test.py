@@ -1,4 +1,4 @@
-from project.trip import Trip
+from project2.trip import Trip
 import unittest
 
 
