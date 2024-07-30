@@ -55,6 +55,7 @@ class RobotsManagingApp:
             raise Exception("No such robot in this service!")
 
         service.robots.remove(robot)
+        self.robots.append(robot)
         return f"Successfully removed {robot_name} from {service_name}."
 
     def feed_all_robots_from_service(self, service_name: str):
