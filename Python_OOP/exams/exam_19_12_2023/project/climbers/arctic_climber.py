@@ -3,16 +3,15 @@ from project.peaks.base_peak import BasePeak
 
 
 class ArcticClimber(BaseClimber):
-
-    INITIAL_STRENGTH = 200
+    INIT_STRENGTH = 200
 
     def __init__(self, name: str):
-        super().__init__(name, self.INITIAL_STRENGTH)
+        super().__init__(name, self.INIT_STRENGTH)
 
     def can_climb(self):
         return self.strength >= 100
 
     def climb(self, peak: BasePeak):
-        peak_difficulty = peak.calculate_difficulty_level()
-        self.strength -= 20 * 2 if peak_difficulty == 'Extreme' else 20 * 1.5
+        multiplier = 2.0 if peak.difficulty_level == 'Extreme' else 1.5
+        self.strength -= 20 * multiplier
         self.conquered_peaks.append(peak.name)

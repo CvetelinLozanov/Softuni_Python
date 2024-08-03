@@ -1,5 +1,5 @@
 import unittest
-from project.climbing_robot import ClimbingRobot
+from project2.climbing_robot import ClimbingRobot
 
 
 class ClimbingRobotTest(unittest.TestCase):

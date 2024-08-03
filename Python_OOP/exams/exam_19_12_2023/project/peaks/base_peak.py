@@ -1,4 +1,4 @@
-from abc import abstractmethod, ABC
+from abc import ABC, abstractmethod
 
 
 class BasePeak(ABC):
@@ -15,18 +15,16 @@ class BasePeak(ABC):
     def name(self, value):
         if len(value) < 2:
             raise ValueError("Peak name cannot be less than 2 symbols!")
-
         self.__name = value
 
     @property
     def elevation(self):
         return self.__elevation
-
+    
     @elevation.setter
     def elevation(self, value):
         if value < 1500:
             raise ValueError("Peak elevation cannot be below 1500m.")
-
         self.__elevation = value
 
     @abstractmethod
