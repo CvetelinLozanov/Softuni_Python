@@ -2,14 +2,14 @@ import os
 from typing import List
 
 import django
-from django.db.models import When, Case, Value,
+from django.db.models import When, Case, Value, F, QuerySet
 from main_app.choices import OperationSystemChoice
 # Set up Django
 os.environ.setdefault("DJANGO_SETTINGS_MODULE", "orm_skeleton.settings")
 django.setup()
 
 # Import your models
-from main_app.models import ArtworkGallery, Laptop, ChessPlayer, Meal, Dungeon
+from main_app.models import ArtworkGallery, Laptop, ChessPlayer, Meal, Dungeon, Workout
 
 
 # Create and check models
@@ -141,6 +141,93 @@ def show_hard_dungeons():
                      for d in Dungeon.objects.filter(difficulty='Hard').order_by('-location'))
 
 
-def bulk_create_dungeons(args: List[Dungeon]):
-    pass
+def bulk_create_dungeons(args: List[Dungeon]) -> None:
+    Dungeon.objects.bulk_create(args)
+
+
+def update_dungeon_names():
+    Dungeon.objects.update(name=
+        Case(
+            When(difficulty='Easy', then=Value("The Erased Thombs")),
+            When(difficulty='Medium', then=Value("The Coral Labyrinth")),
+            When(difficulty='Hard', then=Value("The Lost Haunt"))
+        )
+    )
+
+
+def update_dungeon_bosses_health() -> None:
+    Dungeon.objects.exclude(difficulty='Easy').update(boss_health=500)
+
+
+def update_dungeon_recommended_levels() -> None:
+    Dungeon.objects.update(recommended_level=
+        Case(
+            When(difficulty='Easy', then=Value(25)),
+            When(difficulty='Medium', then=Value(50)),
+            When(difficulty='Hard', then=Value(75))
+        )
+    )
+
+
+def update_dungeon_rewards() -> None:
+    Dungeon.objects.filter(
+        boss_health=500
+    ).update(reward='1000 Gold')
+
+    Dungeon.objects.filter(
+        location__startswith='E'
+    ).update(reward='New dungeon unlocked')
+
+    Dungeon.objects.filter(
+        location__endswith='s'
+    ).update(reward='Dragonheart Amulet')
+
+
+def set_new_locations():
+    Dungeon.objects.update(location=
+        Case(
+            When(recommended_level=25, then=Value("Enchanted Maze")),
+            When(recommended_level=50, then=Value("Grimstone Mines")),
+            When(recommended_level=75, then=Value("Shadowed Abyss"))
+        )
+    )
+
+
+def show_workouts() -> str:
+    return '\n'.join(f"{w.name} from {w.workout_type} type has {w.difficulty} difficulty!"
+              for w in Workout.objects.filter(workout_type__in=('Calisthenics', 'CrossFit')).order_by('id'))
+
+
+def get_high_difficulty_cardio_workouts() -> QuerySet:
+    return Workout.objects.filter(workout_type='Cardio', difficulty='High').order_by('instructor')
+
+
+def set_new_instructors():
+    Workout.objects.update(instructor=
+        Case(
+            When(workout_type='Cardio', then=Value('John Smith')),
+            When(workout_type='Strength', then=Value('Michael Williams')),
+            When(workout_type='Yoga', then=Value('Emily Johnson')),
+            When(workout_type='CrossFit', then=Value('Sarah Davis')),
+            When(workout_type='Calisthenics', then=Value('Chris Heria'))
+        )
+    )
+
+
+def set_new_duration_times():
+    Workout.objects.update(duration=
+        Case(
+            When(instructor='John Smith', then=Value('15 minutes')),
+            When(instructor='Sarah Davis', then=Value('30 minutes')),
+            When(instructor='Chris Heria', then=Value('45 minutes')),
+            When(instructor='Michael Williams', then=Value('1 hour')),
+            When(instructor='Emily Johnson', then=Value('1 hour and 30 minutes')),
+        )
+    )
+
+
+def delete_workouts():
+    Workout.objects.exclude(workout_type__in=['Strength', 'Calisthenics']).delete()
+
 # Run and print your queries
+
