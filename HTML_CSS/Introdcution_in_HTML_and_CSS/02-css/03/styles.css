@@ -1,0 +1,27 @@
+.highlighted-paragraph {
+    color: cyan;
+    font-size: 18pt;
+}
+
+
+#special-content p {
+    background-color: orange;
+    padding: 10px;
+    font-size: 20pt;
+}
+
+label[for] {
+    color: magenta;
+}
+
+input[type="text"] {
+    border-color: cyan;
+}
+
+.weight {
+    font-weight: 700;
+}
+
+.style {
+    font-style: italic;
+}

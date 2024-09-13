@@ -1,0 +1,11 @@
+nav a {
+    color: magenta;
+}
+
+.background {
+    background-color: bisque;
+}
+
+div > .background {
+    color: cyan;
+}

@@ -1,0 +1,31 @@
+h1 {
+    color: rgb(255, 0, 255); 
+}
+
+p {
+    font-size: 12pt;
+}
+
+.highlight {
+    background-color: rgba(226, 226, 226, 0.799);
+}
+
+#main-title {
+    color: cyan;
+}
+
+#special-paragraph {
+    font-style: italic;
+}
+
+ul {
+    list-style-type: circle;
+}
+
+ul li {
+    color: rgb(21, 255, 0);
+}
+
+div {
+    background-color: azure;
+}

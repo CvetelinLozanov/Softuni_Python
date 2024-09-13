@@ -1,0 +1,4 @@
+.comments article:nth-of-type(2) {
+    background-color: silver;
+    color: magenta;
+}
