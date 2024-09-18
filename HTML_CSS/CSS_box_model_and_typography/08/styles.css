@@ -1,0 +1,22 @@
+div {
+    border: 2px solid #333;
+    height: 200px;
+    width: 300px;
+}
+
+.overflow-visible {
+    overflow: visible;
+}
+
+.overflow-hidden {
+    overflow: hidden;
+}
+
+.ovreflow-scroll {
+    overflow: scroll
+}
+
+.overflow-auto {
+    overflow: auto;
+}
+

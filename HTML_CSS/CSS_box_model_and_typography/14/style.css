@@ -1,0 +1,171 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
+
+* {
+  box-sizing: border-box;
+}
+
+html {
+  font-family: "Poppins", sans-serif;
+}
+
+.hero {
+  background-image: url(./images/landing-photo.jpg);
+  background-repeat: no-repeat;
+  background-position: 50% 50%;
+  background-size: 100% auto;
+  height: 700px;
+}
+
+header {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  gap: 20%;
+  padding-top: 24px;
+}
+
+header ul {
+  display: flex;
+  flex-direction: row;
+  gap: 24px;
+}
+
+header nav {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  gap: 24px;
+}
+
+a {
+  text-decoration: none;
+  color: #6c6e7c;
+}
+
+.explore {
+  background-color: #370511;
+  border-style: none;
+  color: white;
+  font-size: 12px;
+  border-radius: 24px;
+  padding: 8px 48px;
+  cursor: pointer;
+}
+
+.hero-info {
+  width: 600px;
+  margin-left: 24%;
+  margin-top: 7%;
+}
+
+.hero-info h1 {
+  font-size: 52px;
+}
+
+.hero-info h2 {
+  font-size: 24px;
+  font-weight: 400;
+  margin-bottom: 32px;
+}
+
+.hero-info p {
+  margin-bottom: 5px;
+}
+
+.hero-info > .explore {
+  margin-top: 32px;
+}
+
+/* Section two */
+
+.two .two-boxes .box {
+  overflow: hidden;
+  width: 300px;
+  height: 500px;
+  border-radius: 16px;
+}
+
+.two p {
+  color: #bababb;
+}
+
+.two .two-boxes .box img {
+  width: 100%;
+  height: 50%;
+}
+
+.two .two-boxes .box h3 {
+  margin-top: 10px;
+  font-size: 20px;
+  text-align: center;
+}
+
+.two .two-boxes .box p {
+  font-size: 14px;
+  margin-top: 16px;
+}
+
+.discover {
+  border: 1px solid #bababb;
+  padding: 8px 32px;
+  border-radius: 24px;
+  background-color: #ffffff;
+  margin-top: 24px;
+  margin-left: 50px;
+}
+
+.two {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.two .two-boxes {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  column-gap: 42px;
+}
+
+.two .two-a {
+  text-align: center;
+  margin-top: 36px;
+  margin-bottom: 20px;
+}
+
+.two .two-a h2 {
+  font-size: 32px;
+}
+
+
+/* Footer */
+
+footer {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  gap: 10%;
+  height: 300px;
+  background-color: #000000;
+  color: white;
+}
+
+
+footer > p{
+    font-size: 36px;
+    font-weight: 700;
+}
+
+footer ul li{
+    margin-bottom: 10px;
+}
+
+.social{
+    display: flex;
+    flex-direction: row ;
+    justify-content: center;
+    gap: 10px;
+}
