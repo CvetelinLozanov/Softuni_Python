@@ -1,0 +1,75 @@
+html {
+    font-size: 16px;
+    line-height: 1.5;
+    font-family: Helvetica, sans-serif;
+}
+
+td, tr {
+    border: 1px solid silver;
+    padding: 5px;
+}
+
+#table1 {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 20px 20px;
+    table-layout: fixed;
+}
+
+.table-heading {
+    background-color: silver;
+}
+
+div {
+    width: 98%;
+}
+
+tr:nth-child(even) {
+    background-color: #dddddd;
+  }
+
+.quote {
+    margin:20px 30px;
+    width:95%;
+    height: 200px;
+    border-left: 4px solid silver;
+}
+
+.quote p {
+    text-align: right;
+}
+
+blockquote {
+    padding: 10px 50px;
+}
+
+p {
+    margin: 10px;
+    padding-bottom: 1.5rem;
+}
+
+ul, ol {
+    padding-left: 1.5rem;
+    padding-bottom: 1.2rem;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    line-height: 1.2;
+    margin-top: 1em;
+    margin-bottom: 0.5em;
+    font-family: Georgia, serif;
+}
+
+hr {
+    color: silver;
+    margin: 10px 10px;
+}
+
+p .author {
+    text-align: right;
+}
