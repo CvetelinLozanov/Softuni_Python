@@ -1,0 +1,28 @@
+body {
+    border: 2px solid green;
+    padding: 20px;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+
+.site-main {
+    border: 2px solid blue;
+    padding: 20px;
+}
+
+.site-main > header,
+.site-main > main,
+.site-main > footer
+ {
+    border: 2px solid black;
+    padding: 20px;
+}
+
+.site-main > header,
+.site-main > main {
+    margin-bottom: 20px;
+}
+
+.site-main p {
+    text-align: center;
+}
+

@@ -1,0 +1,50 @@
+html {
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.banner {
+    width: 100vw;
+    overflow: hidden;
+    position: relative;
+}
+
+/* .img-container {
+    width: 100%;
+    height: 1250px;
+}
+
+.banner img  {
+    width: 100%;
+    height: 100%;
+    object-fit: fill;
+} */
+
+.img-container {
+    background-image: url('images/image1.jpg');
+    width: 100%;
+    height: 1250px;
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+.absolute-header {
+    position: absolute;
+    left: 0; 
+    right: 0; 
+    margin-top: 500px;
+    text-align: center;
+    font-size: 60px;
+    color: #fefefe;
+}
+
+.absolute-text {
+    position: absolute;
+    left: 0;
+    right: 0;
+    text-align: center;
+    color: #fefefe;
+    margin-top: 570px;
+    font-size: 35px;
+    font-weight: 600;
+}

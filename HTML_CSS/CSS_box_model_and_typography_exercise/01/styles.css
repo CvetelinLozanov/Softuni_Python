@@ -1,0 +1,82 @@
+.canvas-box {
+    width: 50vw;
+    display: flex;
+    margin: 50px auto;
+    flex-direction: row;
+    justify-content: center;
+}
+
+.canvas-box div {
+    position: relative;
+    flex: 20px;
+    margin: 20px 20px 20px 20px;
+    border: 1px dashed #666;
+}
+
+.absolute {
+    position: absolute;
+    margin: 0;
+    left:15px;
+    top: 0;
+}
+
+/* .canvas-box div:before {
+    display: block;
+    font-size: 10px;
+    padding-left: 10px;
+} */
+
+.canvas-box .margin {
+    background-color: orange;
+}
+
+/* .canvas-box .margin:before {
+    content: "margin";    
+} */
+
+.canvas-box .border {
+    background-color: rgb(248, 255, 37);
+}
+
+/* .canvas-box .border:before {
+    content: "border";    
+} */
+
+.canvas-box .padding {
+    background-color: rgb(41, 145, 255);
+}
+
+/* .canvas-box .padding:before {
+    content: "padding";    
+} */
+
+.content {
+    background-color: cyan;
+    padding: 10px;
+    text-align: center;
+}
+
+/* .border-box {
+    margin:20px;
+    display: flex;
+    position: relative;
+    width: 100%;
+    background-color: greenyellow;
+    justify-content: center;
+    align-items: center;
+}
+
+.margin-box {
+    padding: 30px;
+    display: flex;
+    justify-content: center;
+    background-color: rgb(4, 0, 255);
+    align-items: center;
+}
+
+.wrapper {
+    padding: 30px;
+    display: inline-block;
+    background-color: magenta;
+    align-items: center;
+} */

@@ -1,0 +1,36 @@
+html {
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+
+a {
+    color: inherit;
+    text-decoration: inherit;
+}
+
+.social-media-buttons-container {
+    display: flex;
+    width: 100vw;
+    justify-content: center
+}
+
+.social-media-buttons {
+    width: 70vw;    
+}
+
+.button {
+    display: inline-block;
+    margin: 25px 5px;
+    padding: 25px;
+    background-color: #eaeaea;
+    padding: px;
+    border-radius: 50%;
+    font-size: 16px;
+}
+
+.button:first-of-type {
+    margin-left: 0px;
+}
+
+i {
+    font-size: 35px;
+}
