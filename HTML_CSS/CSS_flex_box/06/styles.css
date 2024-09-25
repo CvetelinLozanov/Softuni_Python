@@ -1,0 +1,42 @@
+.main-container {
+    display: flex;
+    border: 2px solid blue;
+    padding: 1em;
+    width: 400px;
+    height: 200px;
+    flex-wrap: wrap;
+}
+
+.main-container .flex-items {
+    background-color: #eee;
+    padding: 20px;
+    border: 2px solid #000
+}
+
+.align-content-flex-start {
+    align-content: flex-start;
+}
+
+.align-content-center {
+    align-content: center;
+}
+
+.align-content-flex-end {
+    align-content: flex-end;
+}
+
+.align-content-space-between {
+    align-content: space-between;
+}
+
+.align-content-space-around {
+    align-content: space-around;
+}
+
+.align-content-space-evenly {
+    align-content: space-around;
+}
+
+.align-content-space-evenly {
+    align-content: space-evenly;
+}
