@@ -1,0 +1,56 @@
+html {
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+
+.media-type {
+    margin: 2em;
+}
+
+.media-container {
+    margin: 2em;
+}
+
+
+#media-desc {
+    margin: 2em;
+}
+
+body::before {
+    display: block;
+    background-color: #369;
+    color: #fff;
+    padding: 1em 1.5em;
+    border-radius: 0.3em;
+    margin: 2em;
+    content: 'The content is shown';
+}
+
+@media (hover: none) {
+    body::before {
+    display: block;
+    content: "This device doesn't support hover";
+    }
+}
+
+@media (orientation: landscape) {
+    body::before {
+    display: block;
+    content: 'The device is in landscape orientation';
+    }
+}
+
+
+@media (width: 600px) {
+    body::before {
+    display: block;
+    content: 'The viewport width is 600px';
+    }
+}
+
+@media (height: 800px) {
+    body::before {
+    display: block;
+    content: 'The viewport height is 800px';
+    }
+}
+    

@@ -1,0 +1,42 @@
+html {
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+
+.media-type {
+    margin: 2em;
+}
+
+.media-container {
+    margin: 2em;
+}
+
+
+#media-desc {
+    margin: 2em;
+}
+
+body::before {
+    display: block;
+    background-color: #369;
+    color: #fff;
+    padding: 1em 1.5em;
+    border-radius: 0.3em;
+    margin: 2em;
+    content: 'The content is shown';
+}
+
+@media (hover: none) {
+    body::before {
+    display: block;
+    content: 'The device does NOT support hover';
+    }
+}       
+
+@media (hover: hover) {
+    body::before {
+    display: block;
+    content: 'The device does support hover';
+    }
+}              
+        
+    
