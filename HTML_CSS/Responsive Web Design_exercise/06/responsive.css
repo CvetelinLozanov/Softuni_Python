@@ -1,0 +1,43 @@
+@media (max-width: 800px) {
+    body {
+        justify-content: initial;   
+        align-items: initial;
+        padding: 2em;
+    }
+
+    main {
+        display: flex;
+        flex-direction: column;
+        gap: 1em;
+    }
+
+    .site {
+        max-width: 750px;
+    }
+
+    .site {
+        flex-wrap: wrap;
+    }
+
+    .site article {
+        display: flex;
+        gap: 1em
+    }
+
+    article {
+        flex-direction: column;
+    }
+
+    .site > main, aside {
+        flex: 0 0 100%;
+    }
+
+    article .media {
+        order: 0;
+    }
+
+    article .content {
+        order: 1;
+    }
+    
+}

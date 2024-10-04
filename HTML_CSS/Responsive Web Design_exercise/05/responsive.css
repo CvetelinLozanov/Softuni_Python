@@ -1,0 +1,10 @@
+@media (max-width: 800px) {
+    .site {
+        max-width: 750px;
+    }
+
+    .nav-menu {
+        display: flex;
+        gap: 1em;
+    }
+}

@@ -1,0 +1,12 @@
+@media (max-width: 800px) {
+    .site-one,
+    .site-two {
+        max-width: 750px;
+        border-radius: 1em;
+        border: 1px solid #cbcbcb;
+        margin: 1em auto;
+        background: #fefefe;
+        box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+        overflow: hidden;
+    }   
+}
