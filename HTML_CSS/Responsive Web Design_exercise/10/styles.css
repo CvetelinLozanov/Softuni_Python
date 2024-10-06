@@ -1,0 +1,194 @@
+html {
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+
+.site {
+    max-width: 1200px;
+    margin: 2em auto;
+}
+
+.cards-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1em;
+}
+
+.card {
+    flex: 0 0 calc(100% / 3 - 2em);
+    padding: 0.5em;
+    border: 1px solid #d6d6d6;
+    box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+    border-radius: 5px;
+    display: flex;
+    flex-direction: column;
+    background-image: linear-gradient(to bottom, white, #eee);
+}
+
+.card > header {
+    position: relative;
+    overflow-x: hidden;
+    padding-bottom: 60px;
+}
+
+header > .tag {
+    position: absolute;
+    top: 0;
+    right: 0;
+    color: white;
+    opacity: 0.8;
+    padding: 0.4em;
+    border-radius: 6px;
+    font-size: 13px;
+    font-weight: 500;
+    box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 12px;
+}
+
+
+.live {
+    background: #3fbb97;
+}
+
+.video {
+    background: #943a91;
+}
+
+.practice {
+    background: #edae37;
+}
+
+
+header > .lecturer {
+    position: absolute;
+    top: 125px;
+    right: 65px;
+    display: block;
+    background: white;
+    padding: 3px 12px;
+    border-radius: 6px;
+    font-size: 14px;
+    z-index: 2;
+    box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 12px;
+}
+
+header > .lecturer-avatar {
+    position: absolute;
+    top: 90px;
+    right: -15px;
+    color: white;
+    background: white;
+    padding: 0.3em;
+    border-radius: 50px;
+    aspect-ratio: 1/1;
+    z-index: 3;
+    box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 12px;
+}
+
+header > .course-info {
+    position: absolute;
+    display: flex;
+    flex-wrap: wrap;
+    background: white;
+    padding: 0.5em;
+    border-radius: 5px;
+    margin: 0.5em;
+    top: 135px;
+    z-index: 1;
+    box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 12px;
+}
+
+.course-info > h2 {
+    flex: 0 0 100%;
+    font-size: 18px;
+    padding-bottom: 5px;
+    border-bottom: 1px solid #dcdcdc;
+}
+
+.course-info > p {
+    font-size: 12px;    
+    margin-top: 5px
+}
+
+.img-container {
+    display: flex;
+    height: 180px;
+    border-radius: 5px;
+    overflow: hidden;
+    position: relative;
+}
+
+.img-container img{
+    width: 100%;
+    object-fit: cover;
+}
+
+
+main {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5em;
+    margin: 0 1em;
+}
+
+
+main > * {
+    display: flex;
+    justify-content: space-between;
+    align-items: end;
+  }
+
+main .scheduler-container {
+    padding: 5px;
+    border: 1px solid rgb(221, 221, 221);
+    border-radius: 5px;
+    background: #fafafa;
+}
+
+.helpers a {
+    color: #15c699;
+    font-weight: 600;
+    font-size: 14px;
+}
+
+.scheduler-container  p {
+    opacity: 0.7;
+}
+
+.heading {
+    font-size: 12px;
+}
+
+.pricing > p {
+    font-weight: 600;
+}
+
+footer {
+    display: flex;
+    margin: 1em 1em;
+    flex-direction: column;
+}
+
+footer > * {
+    display: flex;
+    justify-content: space-between;
+    align-items: end;
+}
+
+footer .group {
+    padding: 1em;
+    box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 12px;
+    border-radius: 5px;
+    background: white;
+    color: #15c699
+}
+
+footer .pricing {
+    font-weight: 700;
+    font-size: 22px;
+}
+
+footer .lectures,
+footer .duration {
+    font-weight: 500;
+    font-size: 16px;
+}
+
