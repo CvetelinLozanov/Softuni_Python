@@ -5,6 +5,10 @@
 
     }
 
+    body {
+        gap: 0;
+    }
+
     header > h2 {        
         flex: 0 0 100%;
         background: var(--var-dark-brown-color); 
@@ -23,6 +27,7 @@
 
     .nav-bar .nav-items {
         gap: 0;
+        flex: 0 0 100%;
     }
 
     .nav-items li {
@@ -42,6 +47,10 @@
         justify-content: center;
     }
 
+    .location-cards > * {
+        flex: 0 0 100%;
+    }
+
     .img-container > *,
     footer > *,
     main > * {
@@ -51,7 +60,11 @@
 
     .banner .img-container {       
         /* height: 470px; */
-        height: calc(100vh - 355px);        
+        height: calc(100vh - 307px);        
+    }
+
+    .header-info {
+        width: 67%;
     }
 
     .header-info .info {
@@ -80,6 +93,107 @@
     .banner .mobile-size {
         border-radius: 2em;
         padding: 0.5em 2em 0.5em 2em;
+        flex: 0 0 156px;
     }
 
+    .footer-options > h2 {
+        flex: 0 0 100%;
+        text-align: center;
+    }
+
+    .footer-options {
+        flex-wrap: wrap;
+    }
+
+    .social-media-links {
+        text-align: center;
+        flex: 0 0 100%;
+    }
+}
+
+@media (max-width: 1000px) and (min-width: 611px){
+
+    body {
+        gap: 0;
+    }
+
+    header {        
+        padding: 0;
+
+    }
+
+
+    .img-container > *,
+    footer > *,
+    main > * {
+        width: 85%;
+        margin: 0 auto;
+    }
+
+    header > h2 {    
+        flex: 0 0 20%;     
+        padding: 0.3em;
+        text-align: center;
+        border-bottom: 1px solid var(--var-dark-brown-color)
+    } 
+
+    .nav-bar .nav-items {
+        gap: 0.5em;
+        justify-content: space-between;
+        flex: 0 0 90%;
+    }
+
+    .nav-bar .nav-items {
+        gap: 0;
+    }
+
+    .nav-items li {
+        display: flex;
+        
+    }
+
+    .nav-bar {
+        display: flex;
+        flex: 1 0 80%;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .nav-items li:last-child {
+        justify-content: center;
+    }
+
+    .nav-items li > a {
+        opacity: 0.7;
+        padding: 0.5em;
+        font-size: 16px;
+    } 
+
+    .banner .img-container {       
+        /* height: 470px; */
+        height: calc(100vh - 53px);        
+    }
+
+    .header-info {
+        width: 80%;
+    }
+
+    .header-info .info {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 1em;
+        flex: 0 1 70%;
+    }
+
+    .location-cards > .card {
+        flex: 0 0 calc(100% / 2 - 1em);
+    }
+
+    .info h3 {
+        margin: 0;
+    }
+
+    .info p {
+        margin: 0;
+    }
 }
