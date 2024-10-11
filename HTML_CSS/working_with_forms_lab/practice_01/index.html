@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Forms practice</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="reset.css">
+</head>
+<body>
+    <form>
+        <fieldset class="personal-info">
+            <legend>Personal Information</legend>
+            <label for="first_name" class="required">First Name</label>
+            <input type="text" id="first_name" name="first_name" required placeholder="Enter your first name">
+            
+            <label for="last_name" class="required">Last Name</label>
+            <input type="text" id="last_name" name="last_name" required placeholder="Enter your last name">
+    
+            <label for="password" class="required">Password</label>
+            <input type="password" id="password" name="password" required placeholder="Enter your password" minlength="6">
+    
+            <label for="email" class="required">Email</label>
+            <input type="email" id="email" name="email" required placeholder="Enter your email">
+    
+            <label for="phone" class="required">Phone</label>
+            <input type="tel" id="phone" name="phone" required placeholder="+359" pattern="\+359[0-9]{6,10}">
+    
+            <label for="height">Enter your height in CM</label>
+            <input type="number" id="height" name="height" min="110" value="160" max="250">
+            
+            <label for="weight">Enter your height in CM</label>
+            <input type="range" id="weight" name="weight" min="110" value="160" max="250">
+    
+            <label for="month" class="required">Birth Month</label>
+            <input type="date" id="month" name="month" required>
+    
+        </fieldset>
+
+        <fieldset class="preferences">
+            <div>
+                <legend>Preferences</legend>
+                <p>What course you would like to join?</p>
+                <label for="react">React.js</label>
+                <input type="radio" id="react" name="course_choice" value="React.js">
+                <label for="next">Next.js</label>
+                <input type="radio" id="next" name="course_choice" value="Next.js">
+            </div> 
+            <div>   
+                <p>Whay is your choiche for back-end coding?</p>
+                <input type="checkbox" id="php" name="backend_choice" value="php">
+                <label for="php">PHP</label>
+                <input type="checkbox" id="python" name="backend_choice" value="python">
+                <label>Python</label>
+            </div>
+
+            <div> 
+                <p>
+                    What is your favorite IDE?
+                </p>
+                <select name="ide" id="ide-choice">
+                    <option value="">Please choose an option</option>
+                    <option value="VSCode">VSCode</option>
+                    <option value="Atom">Atom</option>
+                    <option value="NetBeans">NetBeans</option>
+                </select>
+            </div>
+
+            <div>
+                <p>
+                    What is your favorite IDE?
+                </p>
+                <select name="ide" id="ide-multiple" multiple>
+                    <option value="">Please choose an option</option>
+                    <option value="VSCode">VSCode</option>
+                    <option value="Atom">Atom</option>
+                    <option value="NetBeans">NetBeans</option>
+                </select>
+            </div>
+        </fieldset>
+
+        <fieldset class="additional-information">
+            <legend>Additional Information</legend>
+
+            <div>
+                <label for="file">
+                    Upload your CV
+                </label>
+                <input type="file" id="file" name="file" accept=".jpg,.pdf,.png">
+            </div>
+            <div>
+                <label for="cover-letter">
+                    Upload your cover letter
+                </label>
+                <input type="file" id="cover-letter" name="file" accept="image/*" multiple size="10000000"> 
+            </div>
+            <div>
+                <label for="letter">
+                    Write your Cover Letter
+                </label>
+                <textarea type="textarea" id="letter" rows="5" cols="50" placeholder="Please, write something"></textarea>
+            </div>
+        </fieldset>
+
+        <fieldset class="more-examples">
+            <legend>More examples</legend>
+            <div>
+                <label for="search">Search:</label>
+                <input id="search" type="search" name="search">
+            </div>
+            <div>
+                <label for="website">Website:</label>
+                <input id="website" type="website" name="website">
+            </div>
+        </fieldset>
+        <button>Register</button> 
+       
+    </form>
+</body>
+</html>

@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Forms practice</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="reset.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
+</head>
+<body>
+    <div class="form-container">
+        <i class="fa-brands fa-github"></i>
+        <form action="https://github.com/search" method="get" class="position-relative">
+
+            <fieldset>
+                <legend>Choose search type</legend>
+                <div>
+                    <input type="radio" id="repositories" name="type" value="repositories">
+                    <label for="repositories">repositories</label>
+                </div>
+                <div>
+                    <input type="radio" id="issues" name="type" value="issues">
+                    <label for="">issues</label>
+                </div>
+                <div>
+                    <input type="radio" id="pullrequests" name="type" value="pullrequests">
+                    <label for="pullrequests">pull requests</label>
+                </div>               
+            </fieldset>
+
+           
+
+            <label for="search"> What code are you searching</label>
+            <input type="search" id="search" name="q" required placeholder="Enter your search term">          
+
+            <button type="submit"><i class="fa-solid fa-magnifying-glass"></i></button>
+        </form>
+    </div>
+
+    <div class="form-container youtube">
+        <i class="fa-brands fa-github"></i>
+        <form action="https://www.youtube.com/results" method="get" class="position-relative">         
+           
+
+            <label for="search"> What are you going to watch today?</label>
+            <input type="search" id="search" name="search_query" required placeholder="Enter your search term">          
+
+            <button type="submit"><i class="fa-solid fa-magnifying-glass"></i></button>
+        </form>
+    </div>
+</body>
+</html>
