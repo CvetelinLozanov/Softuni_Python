@@ -1,0 +1,85 @@
+body {
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-size: 16px;
+    background: #eee;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+.login-form {
+    background: #fff;
+    width: 1200px;
+    display: flex;
+    padding: 1em;
+    border-radius: 5px;
+}
+
+.login-form form {
+    display: flex;
+    gap: 1em;
+}
+
+form { 
+    flex: 0 0 100%;
+}
+
+form  input{
+    border: 0;
+    background-color: #eee;
+    border-radius: 5px;
+    padding: 1em;
+}
+
+input[type=text] {
+    flex: 0 0 20%;
+}
+
+input[type=email] {
+    flex: 1 0 37%;
+}
+
+
+.login-form button {
+    flex: 0 0 20%;
+    background: #ff8c00;
+    padding: 1em;
+    border: 0;
+    cursor: pointer;
+    color: white;
+    border-radius: 3px;
+    font-weight: 700;
+    font-size: 16px;
+}
+
+@media (max-width: 400px){
+    .login-form {
+        width: 90%;
+        flex-direction: column;
+    }
+
+    form {
+        flex-direction: column;
+    }
+}
+
+@media (max-width: 600px){
+    .login-form {
+        width: 90%;
+    }
+
+    form {
+        flex-wrap: wrap;
+    }
+
+    .login-form button {
+        flex: 0 0 100%;
+    }
+}
+
+@media (max-width: 800px){
+    .login-form {
+        width: 90%;
+    }
+}
