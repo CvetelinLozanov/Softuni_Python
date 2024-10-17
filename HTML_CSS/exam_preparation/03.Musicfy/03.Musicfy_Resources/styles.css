@@ -1,0 +1,228 @@
+@import url('https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+body {
+    font-family: 'Lato', sans-serif;
+    font-size: 16px;
+    background: #ffffff;
+}
+
+h1, h2, h3, h4, h5, h6 {
+    font-family: "Montserrat", sans-serif;
+}
+
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: #000;
+    color: #fff;
+}
+
+nav ul {
+    display: flex;
+    gap: 2em;
+    margin-right: 2em;
+}
+
+nav ul li {
+    font-size: 1.2rem;
+    font-weight: 600;
+}
+
+main {
+    display: flex;
+    flex-direction: column;
+    gap: 2em;
+}
+
+.logo img {
+    height: 65px;
+}
+
+.heroSection {
+    position: relative;
+}
+
+.heroSection > * {
+    z-index: 2;
+    position: relative;
+}
+
+.imageWrapper  { 
+    background: #1cb853;
+    height: 350px;
+    position: absolute;
+    width: 100%;
+    z-index: 1 !important;
+}
+
+.imageWrapper img {
+    width: 45%;
+    position: absolute;
+}
+
+.prices {
+    /* position: absolute; */
+     width: 900px;
+    left: 50%;
+    transform: translate(-50%, 0);
+    padding: 40px 0;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1em;
+    justify-content: space-between;
+}
+
+.prices h1 {
+    text-align: center;
+    color: white;
+    font-size: 1.8rem;
+    flex: 0 0 100%;
+}
+
+.singlePrice {
+    flex: 0 0 calc(43% - 1em);
+    background: #fff;
+    border-radius: 10px;
+    padding: 15px 0 0 0;
+    box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+    border: 1px solid rgb(241, 241, 241);
+    color: #53536c;
+    flex-direction: column;
+    gap: 1em;
+    display: flex;
+    overflow: hidden;
+    border: 1px solid #969696;
+}
+
+.singlePrice h2 {
+    font-size: 1.2rem;
+    margin-bottom: 1em;
+    text-align: center;
+}
+
+.singlePrice ul {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    padding: 0 35px;
+    min-height: 200px;
+}
+
+.singlePrice li {
+    list-style: circle;
+}
+
+.singlePrice a {
+    background: #1cb853;
+    padding: 8px 30px;
+    color: #fff;
+    display: block;
+    width: max-content;
+    margin: auto;
+    border-radius: 25px;
+    font-weight: 700;
+    margin-top: 10px;
+}
+
+.priceTab {
+    display: flex;
+    padding: 20px 8px;
+    background: #000;
+    color: #FFF;
+    justify-content: space-around;
+    font-size: 1rem;
+    position: relative;
+    gap: 5px;
+}
+
+.separator {
+    position: absolute;
+    width: 1px;
+    height: 40px;
+    top: 10px;
+    background: silver;
+}
+
+.priceTab > p {
+    flex: 0 0 calc(50% - 10px);
+    text-align: center;
+}
+
+.compareMe > h3,
+.compareMe > p {
+    text-align: center;    
+}
+
+.compareMe > h3 {
+    font-size: 36px;
+}
+
+.compareMe > p {
+    font-size: 14px;
+}
+
+
+.compareMe {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5em;
+}
+
+.comparison {
+    width: 800px;
+    margin: auto;
+    background: #cbcaca; 
+    border-radius: 5px;
+}
+
+.compareRow {
+    display: flex;
+    width: 100%;
+    justify-content: space-between;
+    padding: 5px 10px;
+
+}
+
+.compareRow:nth-of-type(even) {
+    background: #80d79f;
+}
+
+.imgGroup {
+    display: flex;
+    gap: 2em;
+}
+
+.dogopal {
+    display: flex;
+    gap: 50px;
+    margin: auto;
+    width:1200px;
+    flex-wrap: wrap;
+    align-items: center;
+}
+
+.dogopalContent {
+    flex: 0 0 60%;
+    display: flex;
+    flex-direction: column;
+    gap: 0.2em;
+}
+
+.dogopalImg {
+    flex: 1 0 25%;
+}
+
+.dogopalImg img {
+    width: 100%;
+    max-width: 100%;
+}
+
+footer {
+    margin-top: 80px;
+    background: #000;
+    color: white;
+    display: flex;
+    justify-content: center;
+    padding: 2em;
+}

@@ -1,0 +1,64 @@
+@import url('https://fonts.googleapis.com/css2?family=Gochi+Hand&display=swap');
+
+body {
+    font-family: 'Gochi Hand', sans-serif;
+    font-size: 16px;
+    background: #e0e0e0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+.postcard {
+    display: flex;
+    flex-direction: column;
+    background: #fff;
+    max-width: 800px;
+    border-radius: 15px;
+    box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+    overflow: hidden;
+}
+
+.postcard .postcardTop {
+    display: flex;
+    border-radius: 15px 15px 0 0;
+    overflow: hidden;
+    position: relative;
+    margin: 1em;
+}
+
+.postcardTop img {
+    width: 100%;
+    height: auto;
+}
+
+.message {
+    position: absolute;
+    background: #fff;
+    bottom: 10px;
+    left: 20px;
+    right: 20px;
+    border-radius: 15px;
+    text-align: center;
+    padding: 15px;
+}
+
+h1 {
+    font-size: 16px;
+    margin-bottom: 10px;
+}
+
+.postcardBottom {
+    background: #f8f8f8;
+    border-top: 1px solid silver;
+    padding: 2em;
+    display: flex;
+    flex-direction: column;
+    gap: 0.5em;
+}
+
+p {
+    font-size: 12px;
+    opacity: 0.5;
+}
