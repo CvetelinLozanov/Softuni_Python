@@ -1,0 +1,251 @@
+@media (max-width: 610px) {
+    header {        
+        flex-wrap: wrap;
+        padding: 0;
+    }
+
+    body {
+        gap: 0;
+    }
+
+    .mobileToggler {
+        display: block;
+    }
+
+    .fa-xmark {
+        display: none !important;
+    }
+
+    .mobileTogglerCheckbox:checked ~ label > .fa-xmark {
+        display: block !important;
+    }
+
+    .mobileTogglerCheckbox:checked ~ label > .fa-bars {
+        display: none !important;
+    }
+
+    .mobileTogglerCheckbox:checked ~ nav {
+        display: flex;
+    }
+
+    header {
+        justify-content: flex-start;
+    }
+
+    header > h2 {        
+        /* flex: 0 0 100%; */
+        text-align: center;
+        color: var(--var-dark-brown-color);
+    }
+
+    .banner .button {
+        border-radius: 0;
+    }
+
+    .nav-bar {
+        flex: 0 0 100%;
+        display: none;
+    }
+
+    .nav-bar .nav-items {
+        gap: 0;
+        flex: 0 0 100%;
+    }
+
+    .nav-items li {
+        border-bottom: 1px solid var(--var-dark-brown-color);
+        flex: 0 0 100%;
+        display: flex;
+        justify-content: center;
+    }
+
+    .nav-items li:first-child {
+        border-top: 1px solid var(--var-dark-brown-color);
+    }
+
+    .nav-items li:last-child {
+        border-bottom: transparent;
+    }
+
+    .nav-items li > a {
+        flex: 0 0 100%;
+        display: flex;
+        justify-content: center;
+    }
+
+    header li > a:hover,
+    header li > a:active {
+        background: var(--var-dark-brown-color);
+        color: var(--var-cream-color) ;
+        opacity: 1;
+        border-radius: 5px;
+    }
+
+    .location-cards > * {
+        flex: 0 0 100%;
+    }
+
+    .card a:hover,
+    .card a:active {
+        background: #c7b9bc;
+    }
+
+    .img-container > *,
+    footer > *,
+    main > * {
+        width: 85%;
+        margin: 0 auto;
+    }
+
+    .banner .img-container {       
+        /* height: 470px; */
+        height: calc(100vh - 307px);        
+    }
+
+    .header-info {
+        width: 67%;
+    }
+
+    .header-info .info {
+        margin: 30px 0;
+        flex: 0 1 100%;
+        display: flex;
+        flex-wrap: wrap;
+        gap: 0.6em;
+    }
+    
+    .info h1 {
+        font-size: 28px;
+    }
+
+    .info h3 {
+        font-size: 18px;
+        margin: 0;
+    }
+
+    .info p {
+        font-size: 14px;
+        margin: 0;
+        flex: 0 1 60%;
+    }
+
+    .banner .mobile-size {
+        border-radius: 2em;
+        padding: 0.5em 2em 0.5em 2em;
+        flex: 0 0 156px;
+    }
+
+    .footer-options > h2 {
+        flex: 0 0 100%;
+        text-align: center;
+    }
+
+    .footer-options {
+        flex-wrap: wrap;
+    }
+
+    .social-media-links {
+        text-align: center;
+        flex: 0 0 100%;
+    }
+}
+
+@media (max-width: 1000px) and (min-width: 611px){
+
+    body {
+        gap: 0;
+    }
+
+    header {        
+        padding: 0;
+
+    }
+
+
+    .img-container > *,
+    footer > *,
+    main > * {
+        width: 85%;
+        margin: 0 auto;
+    }
+
+    header > h2 {    
+        flex: 0 0 20%;     
+        padding: 0.3em;
+        text-align: center;
+        border-bottom: 1px solid var(--var-dark-brown-color)
+    } 
+
+    .nav-bar .nav-items {
+        gap: 0.5em;
+        justify-content: space-between;
+        flex: 0 0 90%;
+    }
+
+    .nav-bar .nav-items {
+        gap: 0;
+    }
+
+    .nav-items li {
+        display: flex;
+        
+    }
+
+    .nav-bar {
+        display: flex;
+        flex: 1 0 80%;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .nav-items li:last-child {
+        justify-content: center;
+    }
+
+    .nav-items li > a {
+        opacity: 0.7;
+        padding: 0.5em;
+        font-size: 16px;
+    } 
+
+    header li > a:hover,
+    header li > a:active {
+        background: var(--var-dark-brown-color);
+        color: var(--var-cream-color) ;
+        opacity: 1;
+        border-radius: 5px;
+    }
+
+    .banner .img-container {       
+        /* height: 470px; */
+        height: calc(100vh - 53px);        
+    }
+
+    .header-info {
+        width: 80%;
+    }
+
+    .header-info .info {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 1em;
+        flex: 0 1 70%;
+    }
+    
+    .location-cards > .card {
+        flex: 0 0 calc(100% / 2 - 1em);
+    }
+
+    .card a:hover,
+    .card a:active {
+        background: #c7b9bc;
+    }
+
+    .info h3 {
+        margin: 0;
+    }
+
+    .info p {
+        margin: 0;
+    }
+}

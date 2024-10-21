@@ -4,24 +4,32 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Travel Agency</title>
-    <link rel="stylesheet" href="reset.css">
-    <link rel="stylesheet" href="styles.css">
-    <link rel="stylesheet" href="responsive-home.css">
+    <link rel="stylesheet" href="./styles/reset.css">
+    <link rel="stylesheet" href="./styles/style-home.css">
+    <link rel="stylesheet" href="./styles/responsive-home.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
 </head>
 <body>  
     <section class="banner">
         <header>
-            <h2>Travel</h2>
+            <!-- <div class="top-bar"> -->
+                <input type="checkbox" id="mobileMenuToggler" class="mobileTogglerCheckbox">
+                <label for="mobileMenuToggler" class="mobileToggler">
+                    <i class="fa-solid fa-bars"></i>
+                    <i class="fa-solid fa-xmark"></i>
+                </label>
+                <h2>Travel</h2>                        
+            <!-- </div> -->
             <nav class="nav-bar">
                 <ul class="nav-items">
                     <li><a href="#">Home</a></li>
-                    <li><a href="#">About</a></li>
+                    <li><a href="about.html">About</a></li>
                     <li><a href="#">Tour Packages</a></li>
                     <li><a href="#">Contact</a></li>
                     <!-- <li><a href="#" class="button mobile-height">explore homes</a></li> -->
                 </ul>
-            </nav>                
+            </nav>            
+                
         </header>
         <div class="img-container">            
             <section class="header-info">
@@ -115,7 +123,7 @@
             </div>
             <div class="footer-menu">
                 <ul class="footer-company-info">
-                    <li><a href="#">About us</a></li>
+                    <li><a href="about.html">About us</a></li>
                     <li><a href="#">FAQ</a></li>
                     <li><a href="#">Terms and conditions</a></li>
                     <li><a href="#">Contact</a></li>
