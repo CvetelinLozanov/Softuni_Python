@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="reset.css">
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
+    <title>Digital Agency</title>
+</head>
+<body>
+   <header class="d-flex flex-wrap fd-column align-items-center gap-7">
+        <nav class="main-nav">
+            <ul class="d-flex justify-content-between gap-2">
+                <li id="colorfy-selection"><a href="#">Home</a></li>
+                <li><a href="#">About us</a></li>
+                <li><a href="#">Portfolio</a></li>
+                <li><a href="#">Blog</a></li>
+                <li><a href="#">Contact Us</a></li>
+            </ul>
+        </nav>
+        <a class="contact-us-button">Contact Us</a>
+        <div class="spirit-of-agancy-container d-flex flex-wrap align-items-center">
+            <div class="content d-flex flex-wrap fd-column gap-2">
+                <h1>The Spirit of Digital Agency</h1>
+                <p>Vestibulum ac diam sit amet quam vehicula elementum amet est on dui. Nulla porttitor accumsan tincidunt</p>
+                <div class="buttons d-flex gap-2">
+                    <a href="#" class="button-style primary-btn">More about us</a>
+                    <a href="#" class="button-style">Get in touch</a>
+                </div>                
+            </div>
+            <div class="img-container d-flex justify-center align-items-center">
+                <img src="images/header.jpg" alt="header_image">
+            </div>
+        </div>
+   </header>
+   <main>
+       <div class="d-flex fd-column gap-1 cards">
+            <div class="card d-flex fd-column justify-center align-items-center gap-2 relative">
+                <img src="images/bubble.png" alt="bubble" class="absolute bubble bubble-left">
+                <div class="content-image d-flex fd-column justify-center align-items-center">
+                    <div class="card-img-container">
+                        <img src="images/design.jpg">
+                    </div>      
+                    <h2>Web and Graphic Design</h2>
+                </div>                
+                <p>Vestibulum ac diam sit amet quam vehicula elementum amet est on dui. Nulla porttitor accumsan tincidunt.</p>
+            </div>
+            <div class="card d-flex fd-column justify-center align-items-center gap-2 relative">
+                <img src="images/bubble.png" alt="bubble" class="absolute bubble bubble-right">
+                <div class="content-image d-flex fd-column justify-center align-items-center">
+                    <div class="card-img-container">
+                        <img src="images/development.jpg">
+                    </div>      
+                    <h2>Web & App</h2>
+                </div>                
+                <p>Vestibulum ac diam sit amet quam vehicula elementum amet est on dui. Nulla porttitor accumsan tincidunt.</p>
+            </div>            
+       </div>
+       <section class="about-contact-us-container">
+            <div class="our-company d-flex fd-column align-items-center gap-5">
+                <div class="header-part fd-column d-flex align-items-center gap-2">
+                    <img src="images/company.jpg">
+                    <p id="colorfy-selection">OUR COMPANY</p>
+                    <h2>Some Fine</br>Words About Us</h2>                    
+                </div>
+                <div class="content-part">
+                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed et pellentesque libero. Curabitur eu ante suscipit, iaculis ex sit amet, ultricies nunc. Ut tincidunt feugiat ipsum elementum congue. Nam et arcu sodales, viverra ex a, ullamcorper augue. Cras quis mauris luctus, mollis nisl sed, condimentum lacus. Aliquam varius aliquet elit eget facilisis. In eget faucibus ex. Sed dictum neque neque, et rutrum magna malesuada id. Aliquam lacinia cursus enim, ac facilisis sem pharetra a. Duis vehicula arcu ut urna fringilla imperdiet.</p>
+                </div>
+                <div class="header-part fd-column d-flex align-items-center gap-2">
+                    <p id="colorfy-selection">CONTACT US</p>
+                    <h2>Get in Touch</h2>                    
+                </div>
+                <form class="d-flex fd-column gap-2">
+                    <lablel for="email" class="d-none"></lablel>
+                    <input type="email" name="email" id="email" placeholder="Your email" required>
+                    <lablel for="sunject" class="d-none"></lablel>
+                    <input type="text" name="subject" id="subject" placeholder="Subject" required>
+                    <lablel for="message" class="d-none"></lablel>
+                    <textarea type="textarea" id="message" rows="5" placeholder="Message here"></textarea>
+                </form>
+            </div>
+       </section>
+   </main>
+   <footer>
+        <div class="footer-container d-flex fd-column align-items-center gap-2">
+            <nav class="footer-nav">
+                <ul class="d-flex justify-content-between gap-3">
+                    <li><a href="#">Home</a></li>
+                    <li><a href="#">About us</a></li>
+                    <li><a href="#">Portfolio</a></li>
+                    <li><a href="#">Blog</a></li>
+                    <li><a href="#">Contact</a></li>
+                </ul>
+            </nav>
+            <p>&copy;2024 - CreateArt</p>
+        </div>
+   </footer>
+</body>
+</html>

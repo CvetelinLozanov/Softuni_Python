@@ -1,0 +1,57 @@
+@media (max-width: 600px) {
+    nav {
+        display: flex;
+        flex-direction: column;
+        gap: 1em;
+    }
+
+    main {
+        display: flex;
+        flex-wrap: wrap;
+    }
+
+    main .pair {
+        flex: 0 0 100%;
+        display: flex;
+        flex-wrap: wrap;
+    }
+
+    .pair .planet {
+        flex: 0 1 100%;
+        display: flex;
+        align-items: center;
+    }
+
+    .planet img {
+        flex: 0 0 50%;
+        width: 50%;
+        height: 50%;
+    }
+
+    .planet .planet_info {
+        flex: 1 0;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .planet_info p {
+        text-align: center;
+    }
+
+    .news ul {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .news ul li {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    footer nav a {
+        border: 0 !important;
+    }    
+}
