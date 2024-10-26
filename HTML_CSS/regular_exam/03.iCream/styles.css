@@ -1,0 +1,308 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap');
+
+body {
+    font-family: "Poppins", sans-serif;
+}
+
+.d-flex {
+    display: flex;
+}
+
+.fd-column {
+    flex-direction: column;
+}
+
+.align-items-center {
+    align-items: center;
+}
+
+.justify-content-center {
+    justify-content: center;
+}
+
+.justify-content-between {
+    justify-content: space-between;
+}
+
+.justify-content-around {
+    justify-content: space-around;
+}
+
+.absolute {
+    position: absolute;
+}
+
+.relative {
+    position: relative;
+}
+
+.container {
+    max-width: 1600px;
+    margin: auto;
+    margin-top: 150px;
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+    padding: 1.5em 3.5em;
+}
+
+.flex-wrap {
+    flex-wrap: wrap;
+}
+
+.gap-1 {
+    gap: 10px;
+}
+
+.gap-2 {
+    gap: 20px;
+}
+
+.gap-3 {
+    gap: 30px;
+}
+
+.gap-5 {
+    gap: 50px;
+}
+
+.font-size-12 {
+    font-size: 12px;
+}
+
+/** Task Based CSS **/
+
+header {
+    background:#f094b1;
+    width: 100%;
+    padding-top: 1em;
+}
+
+main {
+    background: #c7e6f7;
+}
+
+.top-bar {
+    width:50%;
+    margin: auto;
+    color: #fff;
+    font-weight: 500;
+}
+
+.links li::after {
+    content: "";
+    width: 2px;
+    height: 70%;
+    position: absolute;
+    right: 0;
+    background: #FFF;
+    top: 50%;
+    transform: translateY(-50%);
+
+}
+
+.links li a {
+    padding: 20px;
+}
+
+.social-icons {
+    margin-top: 10px;
+    margin-bottom: 55px    
+}
+
+.hero-section {
+    min-height: 700px;
+    background-image:linear-gradient(rgba(0, 0, 0, 0.3),
+    rgba(0, 0, 0, 0.3)), url('images/carousel-1.jpg');
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    color: #fff;
+    border-bottom: 5px solid #a9abb1;
+}
+
+.main-menu {
+    top: -42px;
+    background: #fefefe;
+    border-radius: 50px;
+    color: #000;
+    width: 70%;
+    box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+}
+
+.menu {
+    font-weight: 600;
+}
+
+.main-menu > h1,
+.footer-container > h1 {
+    font-size: 3.5rem;
+    margin: 0 1em;
+    color: #f094b1;
+}
+
+.letter-color {
+    color: #61c2e6;
+}
+
+.heading {
+    width: 50%;
+}
+
+.heading h3 {
+    text-transform: uppercase;
+    font-size: 1.5rem;
+    text-align: center;
+}
+
+.heading h1 {
+    font-size: 4rem;
+    text-align: center;
+    row-gap: 10px;
+    line-height: 80px;
+}
+
+.button-style {
+    border-radius: 50px;
+    padding: 10px 20px;
+    width: max-content;
+    font-weight: 600;
+    font-size: 14px;
+}
+
+.main-container {
+    padding: 70px;
+}
+
+.cards-container {
+    width: 95%;
+}
+
+.pink-btn {
+    background: #f094b1;
+    color: #FFF;
+}
+
+.card,
+.img-card {
+    flex: 0 0 calc(100% / 3);
+    overflow: hidden;
+    border-radius: 5px;
+}
+
+.img-card img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.main-container > h2 {
+    font-size: 1.7rem;
+    opacity: 1;
+    color: #545454;
+}
+
+.main-container > h2::after {
+    width: 15%;
+    content: "";
+    height: 5px;
+    background: #f094b1;
+    position: absolute;
+    top: -10px;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+.card {
+    padding: 2em;
+}
+
+.card h3 {
+    opacity: 0.7;
+    font-size: 1.3rem;
+}
+
+.card h4 {
+    opacity: 0.5;
+    font-size: 1rem;
+}
+
+.card p {
+    opacity: 0.5;
+    font-size: 14px;
+}
+
+.blue-btn {
+    background: #61c2e6;
+    color: #fff;
+}
+
+.card li {
+    font-weight: 700;
+    color: #6b747c;
+}
+
+.card li i {
+    color: #61c2e6;
+    padding: 0 1em;
+}
+
+.footer-container {
+    margin: 50px; 
+}
+
+.footer-container i {
+    color:#61c2e6;
+    border: 4px solid #afe0f2;
+    border-radius: 50px;
+    aspect-ratio: 1/1;
+    padding: 1em;
+}
+
+.footer-container .fa-facebook-f {
+    padding: 1em 1.19em;
+}
+
+.address {
+    text-align: right;
+}
+
+.info { 
+    width: 45%;
+    opacity: 0.6;
+}
+
+.info h4 {
+    font-size: 1.3rem;
+}
+
+.address::after {
+    width: 1px;
+    height: 100%;
+    content: "";
+    background: #000;
+    position: absolute;
+    top: 0;
+    right: -1em;
+}
+
+.info > div {
+    flex: 0 0 45%;
+}
+
+
+.pink-color {
+    color: #f094b1;
+    opacity: 1 !important;
+}
+
+.footer-container > p {
+    margin-top: 1.5em;
+    color: #60676e;
+}
+
+
+@media (min-width: 1200px){
+    .main-container {
+        margin: auto;
+        width: 1200px;
+    }
+}
